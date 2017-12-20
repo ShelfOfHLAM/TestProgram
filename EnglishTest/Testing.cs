@@ -144,7 +144,45 @@ namespace EnglishTest
             global_index++;
 
             if (global_index == questions.Count)
-                MessageBox.Show("Это всё");
+            {
+
+                string message_result = "Вы ответили не правильно на следующие вопросы:\n";
+                try
+                {
+                    double right_variants = 0;
+                    for (int i = 0; i < variant.Count; i++)
+                    {
+                        if (variant[i] == right[i])
+                            right_variants++;
+                        else
+                            message_result = message_result + (i + 1).ToString() + " ";
+                    }
+
+                    double rating_test = Math.Round(right_variants / Double.Parse(global_index.ToString()) * 10);
+
+                    string pth = @"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.f1.test + "/";
+
+                    if (!Directory.Exists(pth))
+                        try
+                        {
+                            Directory.CreateDirectory(pth);
+                        }
+                        catch (Exception err)
+                        {
+                            MessageBox.Show(err.Message); this.Close();
+                        }
+
+                    File.WriteAllText(pth + this.f1.login + ".txt", rating_test.ToString());
+
+
+
+                    MessageBox.Show(message_result);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+            }
             else
             {
                 label6.Text = questions[global_index];

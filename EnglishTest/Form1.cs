@@ -64,7 +64,8 @@ namespace EnglishTest
                 label5.Show();
 
                 menuStrip1.Enabled = true;
-                button1.Enabled = true;
+                if (test.Length != 0)
+                    button1.Enabled = true;
             }
         }
 
@@ -88,12 +89,20 @@ namespace EnglishTest
             test.ShowDialog();
 
             label4.Text = this.test;
+            if (this.test.Length != 0)
+                button1.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form testing = new Testing(this);
             testing.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form tresult = new TableResult();
+            tresult.Show();
         }
     }
 }
