@@ -67,7 +67,7 @@ namespace EnglishTest
             try
             {
                 string name_test = selectedItem.ToString();
-                int number_test = Int32.Parse(name_test);
+                //int number_test = Int32.Parse(name_test);
 
                 this.f1.test = name_test;
                 this.Close();

@@ -41,6 +41,8 @@ namespace EnglishTest
 
         private void TableResult_Load(object sender, EventArgs e)
         {
+            label2.Text = this.f1.test;
+
             string[] mass = {"hello", "world", "hey", "lololo", "pomidor"};
 
             string[] dirs = Directory.GetFiles(@"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/users/", "*");

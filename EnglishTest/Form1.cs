@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace EnglishTest
 {
@@ -21,6 +22,7 @@ namespace EnglishTest
             menuStrip1.Enabled = false;
             button1.Enabled = false;
             label5.Hide();
+            button3.Hide();
         }
 
         //глобальная переменная
@@ -54,7 +56,12 @@ namespace EnglishTest
             Form login_form = new Login(this);
             login_form.ShowDialog();
 
-            if (login.Length != 0)
+            if (login == "word_key_terror")
+            {
+                button3.Show();
+                menuStrip1.Enabled = true;
+            }
+            else if (login.Length != 0)
             {
                 status_enter = true;
                 linkLabel1.Hide();
@@ -83,6 +90,19 @@ namespace EnglishTest
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string pth = @"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.test + "/";
+
+            if (!Directory.Exists(pth))
+                try
+                {
+                    Directory.CreateDirectory(pth);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message); this.Close();
+                }
+
+
             Form testing = new Testing(this);
             testing.ShowDialog();
 
@@ -130,6 +150,7 @@ namespace EnglishTest
 
             label5.Text = "";
             label5.Hide();
+            button3.Hide();
 
             status_enter = false;
 
@@ -140,6 +161,12 @@ namespace EnglishTest
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form adm = new admin();
+            adm.ShowDialog();
         }
     }
 }
