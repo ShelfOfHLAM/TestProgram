@@ -41,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +76,7 @@
             this.таблицаРезультатовToolStripMenuItem.Name = "таблицаРезультатовToolStripMenuItem";
             this.таблицаРезультатовToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
             this.таблицаРезультатовToolStripMenuItem.Text = "Таблица результатов";
+            this.таблицаРезультатовToolStripMenuItem.Click += new System.EventHandler(this.таблицаРезультатовToolStripMenuItem_Click);
             // 
             // вToolStripMenuItem
             // 
@@ -163,22 +163,11 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "label5";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(52, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 199);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label4);
@@ -214,7 +203,6 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.ToolStripMenuItem вToolStripMenuItem;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
     }
 }
 

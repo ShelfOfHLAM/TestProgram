@@ -67,7 +67,7 @@
             // 
             this.columnHeader3.Text = "Рэйтинг";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 114;
+            this.columnHeader3.Width = 86;
             // 
             // columnHeader4
             // 

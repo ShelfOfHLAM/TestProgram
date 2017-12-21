@@ -60,7 +60,7 @@ namespace EnglishTest
 
                     this.Close();
                 }
-                catch (Exception ex)
+                catch (Exception err)
                 {
                     MessageBox.Show("Такой пользователь уже существует");
                 }

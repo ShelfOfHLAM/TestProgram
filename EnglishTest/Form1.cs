@@ -97,11 +97,19 @@ namespace EnglishTest
         {
             Form testing = new Testing(this);
             testing.ShowDialog();
+
+            Form tbr = new TableResult(this);
+            tbr.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form tresult = new TableResult();
+            
+        }
+
+        private void таблицаРезультатовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form tresult = new TableResult(this);
             tresult.Show();
         }
     }

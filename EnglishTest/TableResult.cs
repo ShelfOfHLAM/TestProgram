@@ -12,9 +12,12 @@ namespace EnglishTest
 {
     public partial class TableResult : Form
     {
-        public TableResult()
+        private Form1 f1;
+        public TableResult(Form1 f)
         {
             InitializeComponent();
+
+            this.f1 = f;
         }
 
         //структура для заполнения полей в таблице
@@ -26,13 +29,13 @@ namespace EnglishTest
             public int ratingEng;
             public int ratingProg;
 
-            public User(int number, string nikname, int rtE, int rtP)
+            public User(int number, string nikname, int rating, int rtE, int rtP)
             {
                 this.number = number;
                 this.nikname = nikname;
                 this.ratingEng = rtE;
                 this.ratingProg = rtP;
-                this.rating = 100;
+                this.rating = rating;
             }
         }
 
@@ -41,8 +44,9 @@ namespace EnglishTest
             string[] mass = {"hello", "world", "hey", "lololo", "pomidor"};
 
             string[] dirs = Directory.GetFiles(@"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/users/", "*");
+            string[] files_result = Directory.GetFiles(@"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.f1.test + "/", "*");
 
-            User[] mUser = new User[dirs.Length];
+            User[] mUser = new User[files_result.Length];
 
             //индекс в массиве структур
             int k = 0;
@@ -93,9 +97,36 @@ namespace EnglishTest
                         ratingProg = ratingProg + t;
                 }
 
-                mUser[k] = new User(k+1, nikname.Replace("\n", ""), Int32.Parse(ratingEng), Int32.Parse(ratingProg));
-                k++;
+                nikname = nikname.Replace("\n", "").Replace("\r", "").Replace(" ", "");
+                string pth = "C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.f1.test + "/" + nikname + ".txt";
+                
+                //получаем рэйтинг по заданию:
+                try
+                {
+                    FileStream fl = new FileStream(pth, FileMode.Open, FileAccess.Read);
+                    StreamReader rd = new StreamReader(fl, Encoding.UTF8);
+
+                    int rating_user = Int32.Parse(rd.ReadToEnd().Replace("\n", ""));
+
+                    rd.Close();
+
+                    mUser[k] = new User(k + 1, nikname.Replace("\n", ""), rating_user, Int32.Parse(ratingEng), Int32.Parse(ratingProg));
+                    k++;
+                }
+                catch
+                {
+                    continue;
+                }
             }
+
+            for (int i = 0; i<mUser.Length-1; i++)
+                for (int j=1; j<mUser.Length; j++)
+                    if (mUser[i].rating < mUser[j].rating)
+                    {
+                        User x = mUser[i];
+                        mUser[i] = mUser[j];
+                        mUser[j] = x;
+                    }
 
             for (int i = 0; i < mUser.Length; i++)
             {

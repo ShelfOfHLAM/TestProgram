@@ -174,9 +174,12 @@ namespace EnglishTest
 
                     File.WriteAllText(pth + this.f1.login + ".txt", rating_test.ToString());
 
+                    if (right_variants == global_index)
+                        MessageBox.Show("Молодец, все ответы правильные");
+                    else
+                        MessageBox.Show(message_result);
 
-
-                    MessageBox.Show(message_result);
+                    this.Close();
                 }
                 catch (Exception err)
                 {
