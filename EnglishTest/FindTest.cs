@@ -63,11 +63,19 @@ namespace EnglishTest
         private void button1_Click(object sender, EventArgs e)
         {
             Object selectedItem = comboBox1.SelectedItem;
-            string name_test = selectedItem.ToString();
 
-            this.f1.test = name_test;
+            try
+            {
+                string name_test = selectedItem.ToString();
+                int number_test = Int32.Parse(name_test);
 
-            this.Close();
+                this.f1.test = name_test;
+                this.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Не балуй, выбери один из тестов!");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

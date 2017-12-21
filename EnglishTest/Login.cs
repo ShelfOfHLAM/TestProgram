@@ -33,13 +33,12 @@ namespace EnglishTest
             try
             {
                 FileStream file = new FileStream(file_url, FileMode.Open, FileAccess.Read);
-                MessageBox.Show("Логин подтверждён");
 
                 f1.login = login;
    
                 this.Close();
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
                 MessageBox.Show("Пользователя с таким ником не существует");
             }

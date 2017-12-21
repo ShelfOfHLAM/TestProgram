@@ -124,8 +124,13 @@ namespace EnglishTest
                     if (mUser[i].rating < mUser[j].rating)
                     {
                         User x = mUser[i];
+                        int save_number = mUser[j].number;
+
                         mUser[i] = mUser[j];
+                        mUser[i].number = x.number;
+
                         mUser[j] = x;
+                        mUser[j].number = save_number;
                     }
 
             for (int i = 0; i < mUser.Length; i++)
@@ -139,6 +144,11 @@ namespace EnglishTest
                 listView1.Items.Add(lvi);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

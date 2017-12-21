@@ -64,23 +64,11 @@ namespace EnglishTest
                 label5.Show();
 
                 menuStrip1.Enabled = true;
-                if (test.Length != 0)
-                    button1.Enabled = true;
             }
         }
 
         private void вToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            menuStrip1.Enabled = false;
-            button1.Enabled = false;
-
-            label5.Text = "";
-            label5.Hide();
-
-            status_enter = false;
-
-            linkLabel1.Show();
-            linkLabel2.Show();
         }
 
         private void выбратьТестToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,6 +99,47 @@ namespace EnglishTest
         {
             Form tresult = new TableResult(this);
             tresult.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void закрытьПрограммуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {            
+        }
+
+        private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuStrip1.Enabled = false;
+            button1.Enabled = false;
+
+            this.login = "";
+            this.test = "";
+
+            label5.Text = "";
+            label5.Hide();
+
+            status_enter = false;
+
+            linkLabel1.Show();
+            linkLabel2.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

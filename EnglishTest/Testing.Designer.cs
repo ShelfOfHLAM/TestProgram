@@ -132,7 +132,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Testing";
-            this.Text = "Testing";
+            this.Text = "Тест идёт: ";
             this.Load += new System.EventHandler(this.Testing_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

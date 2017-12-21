@@ -42,7 +42,7 @@ namespace EnglishTest
             int HEng = (Int32)numericUpDown1.Value;
             int HProg = (Int32)numericUpDown2.Value;
 
-            if ((HEng >= 0 && HEng <= 9) && (HProg >= 0 && HProg <= 9) && (login.Length != 0))
+            if ((HEng >= 0 && HEng <= 10) && (HProg >= 0 && HProg <= 10) && (login.Length != 0) && login != "")
             {
 
                 string file_url = "C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/users/" + login + ".txt";
@@ -65,7 +65,7 @@ namespace EnglishTest
                     MessageBox.Show("Такой пользователь уже существует");
                 }
             }
-            else MessageBox.Show("Параметры знаний должны быть в пределах от 0 до 9");
+            else MessageBox.Show("Параметры знаний должны быть в пределах от 0 до 9\nПоле Логин должно быть заполнено");
         }
     }
 }
