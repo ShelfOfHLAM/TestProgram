@@ -14,3 +14,5 @@ C:\Users\d\Documents\Visual Studio 2008\Projects\EnglishTest\EnglishTest\obj\Deb
 C:\Users\d\Documents\Visual Studio 2008\Projects\EnglishTest\EnglishTest\obj\Debug\EnglishTest.FindTest.resources
 C:\Users\d\Documents\Visual Studio 2008\Projects\EnglishTest\EnglishTest\obj\Debug\EnglishTest.add_question.resources
 C:\Users\d\Documents\Visual Studio 2008\Projects\EnglishTest\EnglishTest\obj\Debug\EnglishTest.admin.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.exe
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.pdb
