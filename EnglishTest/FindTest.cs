@@ -35,7 +35,7 @@ namespace EnglishTest
         {
             try
             {
-                string[] dirs = Directory.GetFiles(@"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/tests/", "*");
+                string[] dirs = Directory.GetFiles(@"./../../../tests/", "*");
                 foreach (string dir in dirs)
                 {
                     string st = Reverse_Str(dir);

@@ -16,3 +16,17 @@ C:\Users\d\Documents\Visual Studio 2008\Projects\EnglishTest\EnglishTest\obj\Deb
 C:\Users\d\Documents\Visual Studio 2008\Projects\EnglishTest\EnglishTest\obj\Debug\EnglishTest.admin.resources
 C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.exe
 C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.pdb
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\bin\Debug\EnglishTest.exe
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\bin\Debug\EnglishTest.pdb
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.csprojResolveAssemblyReference.cache
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.add_question.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.admin.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.FindTest.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.Finish.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.Form1.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.Login.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.Properties.Resources.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.Registration.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.TableResult.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.Testing.resources
+C:\Users\Альмир\Documents\Проекты\Репозиторий\TestProgram\EnglishTest\obj\Debug\EnglishTest.csproj.GenerateResource.Cache

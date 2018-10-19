@@ -45,8 +45,8 @@ namespace EnglishTest
 
             string[] mass = {"hello", "world", "hey", "lololo", "pomidor"};
 
-            string[] dirs = Directory.GetFiles(@"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/users/", "*");
-            string[] files_result = Directory.GetFiles(@"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.f1.test + "/", "*");
+            string[] dirs = Directory.GetFiles(@"./../../../users/", "*");
+            string[] files_result = Directory.GetFiles(@"./../../../results/" + this.f1.test + "/", "*");
 
             User[] mUser = new User[files_result.Length];
 
@@ -100,7 +100,7 @@ namespace EnglishTest
                 }
 
                 nikname = nikname.Replace("\n", "").Replace("\r", "").Replace(" ", "");
-                string pth = "C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.f1.test + "/" + nikname + ".txt";
+                string pth = "./../../../results/" + this.f1.test + "/" + nikname + ".txt";
                 
                 //получаем рэйтинг по заданию:
                 try

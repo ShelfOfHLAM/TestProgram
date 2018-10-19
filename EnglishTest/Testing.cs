@@ -32,7 +32,7 @@ namespace EnglishTest
             label5.Text = this.f1.login.ToString();
 
             //получаем количество вопросов:
-            FileStream file = new FileStream("C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/tests/" + this.f1.test.ToString(), FileMode.Open, FileAccess.Read);
+            FileStream file = new FileStream("./../../../tests/" + this.f1.test.ToString(), FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(file, Encoding.UTF8);
 
             string ftext = reader.ReadToEnd();
@@ -160,7 +160,7 @@ namespace EnglishTest
 
                     double rating_test = Math.Round(right_variants / Double.Parse(global_index.ToString()) * 10);
 
-                    string pth = @"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.f1.test + "/";
+                    string pth = @"./../../../results/" + this.f1.test + "/";
 
                     if (!Directory.Exists(pth))
                         try

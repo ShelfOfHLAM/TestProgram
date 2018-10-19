@@ -45,7 +45,7 @@ namespace EnglishTest
             if ((HEng >= 0 && HEng <= 10) && (HProg >= 0 && HProg <= 10) && (login.Length != 0) && login != "")
             {
 
-                string file_url = "C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/users/" + login + ".txt";
+                string file_url = "./../../../users/" + login + ".txt";
                 string write_to_file = login + "\r\nHEng=" + HEng.ToString() + "\r\nHProg=" + HProg.ToString();
 
                 try

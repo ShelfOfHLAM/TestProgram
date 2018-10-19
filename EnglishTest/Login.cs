@@ -28,7 +28,7 @@ namespace EnglishTest
             //достаём логин
             string login = textBox1.Text;
 
-            string file_url = "C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/users/" + login + ".txt";
+            string file_url = "./../../../users/" + login + ".txt";
 
             try
             {

@@ -90,7 +90,7 @@ namespace EnglishTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string pth = @"C:/Users/d/Documents/Visual Studio 2008/Projects/EnglishTest/results/" + this.test + "/";
+            string pth = @"./../../../results/" + this.test + "/";
 
             if (!Directory.Exists(pth))
                 try
